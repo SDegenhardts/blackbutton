@@ -2,16 +2,20 @@
 
 import styled from "styled-components"
 import Link from "next/link"
-import {GiPotato} from "react-icons/gi"
-
+import { GiPotato } from "react-icons/gi"
+import { usePathname } from "next/navigation"
 
 
 export default function Header(){
+
+        const mantem = usePathname() 
+        
+
     return (
         <Wrapper>
-            <Link href={"/"}>Home</Link>
+            <Link href={"/"} style={ mantem == "/"?{backgroundColor: "black", color: "white"}:{}}>Home</Link>
             <Link href={"/"}><GiPotato/></Link>
-            <Link href={"/about"}>About</Link>
+            <Link href={"/about"} style={ mantem == "/about"?{backgroundColor: "black", color: "white"}:{}} >About</Link>
         </Wrapper>
     )
 }
@@ -39,7 +43,7 @@ const Wrapper = styled.div `
         text-decoration: none;
         color: black;
         background-color: white;
-        padding: 1em 2em;
+        padding: 1.5em 2em;
         font-weight: bold;
         font-size: 1.5em;
         transition: all 0.5s;
