@@ -4,6 +4,7 @@ import styled from "styled-components"
 import Link from "next/link"
 import { GiPotato } from "react-icons/gi"
 import { usePathname } from "next/navigation"
+import Image from "next/image"
 
 
 export default function Header(){
@@ -24,12 +25,12 @@ const Wrapper = styled.div `
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 5%;
+    /* gap: 5%; */
 
     svg{
         fill: #000000;
         background-color: none;
-        height: 1.5em;
+        height: 1em;
         width: 2.5em;
         transition: 0.5s;
         &:hover{

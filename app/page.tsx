@@ -2,6 +2,8 @@
 
 import Image from "next/image"
 import styled from "styled-components"
+import { useState } from "react"
+import Link from "next/link"
 
 // export const metadata = {
 //   title: 'About',
@@ -9,14 +11,22 @@ import styled from "styled-components"
 // }
 
 export default function Home() {
+
+  let image = [
+    "/batata.jpg",
+    "/frita.webp",
+    "/ralada.webp"
+  ]
+  
+   const trocaimagem = () => {
+      setImage ( state => state === 'frita' ? 'ralada': 'frita');
+   }
+   const [imagem,setImage] = useState(image[0]);
+
   return (
     <Wrapper>
-      <Image
-       src={"/batata.jpg"}
-       width={1000}
-       height={500}
-       alt='Batata'
-      />
+      {/* <Image src={"/fritadeira.png"} width={50} height={50} alt={"frita"}/> */}
+      {/* <Image src={"/ralador.png"} width={50} height={50} alt={"ralar"}/> */}
     </Wrapper>
   )
   }
