@@ -5,7 +5,7 @@ import { styled } from "styled-components"
 export default function Footer(){
     return(
         <Wrapper>
-            batata frita é bom!!!!!!!!!!!!!
+            Batata frita é bom!!!!!!!!!!!!!
         </Wrapper>
     )
 }

@@ -15,7 +15,10 @@ export default function Home() {
   let image = [
     "/batata.jpg",
     "/frita.webp",
-    "/ralada.webp"
+    "/ralada.webp",
+    "/recheada.jpeg",
+    "/soute.jpeg",
+    "/queimada.webp"
   ]
   
    const trocaimagem = () => {
@@ -25,8 +28,11 @@ export default function Home() {
 
   return (
     <Wrapper>
-      {/* <Image src={"/fritadeira.png"} width={50} height={50} alt={"frita"}/> */}
-      {/* <Image src={"/ralador.png"} width={50} height={50} alt={"ralar"}/> */}
+    <div>
+      <Image src={"/fritadeira.png"} width={50} height={50} alt={"frita"}/>
+      <Image src={"/ralador.png"} width={50} height={50} alt={"ralar"}/>
+    </div>
+      <Image onClick={() => imagem == image[image.length -1]?setImage(image[0]):setImage(image[image.indexOf(imagem)+1])} src={imagem} width={1000} height={500} alt='Batata'/>
     </Wrapper>
   )
   }
@@ -35,4 +41,11 @@ export default function Home() {
     display: flex;
     justify-content: center;
     margin: 1.2em;
+    align-items: center;
+
+    div{
+      align-items: center;
+      display: flex;
+      justify-content: left;
+    }
   `
