@@ -22,9 +22,9 @@ export default function Home() {
     "/queimada.webp"
   ]
   
-   const trocaimagem = () => {
-      setImage ( state => state === 'frita' ? 'ralada': 'frita');
-   }
+  //  const trocaimagem = () => {
+  //     setImage ( state => state === 'frita' ? 'ralada': 'frita');
+  //  }
    const [imagem,setImage] = useState(image[0]);
 
   return (
